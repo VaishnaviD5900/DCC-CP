@@ -18,7 +18,7 @@ def loginUser(request):
         user = Users(username=username, password=password,)
         if user is not None:
             user.register()
-            return redirect("/")
+            return redirect("payment")
         else:
             return render(request, 'login.html')
     return render(request, 'login.html')
